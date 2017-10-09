@@ -73,5 +73,33 @@ function third() {
 
 
 
+var John = {
+    name: 'John',
+    yearOfBirth: '1990',
+    claculateAge: function()
+    {
+        console.log(this);
+        console.log(2016 - this.yearOfBirth);
+        /*
+        function innerFunction()
+        {
+            console.log(this)
+        }
+        */
+    }
+};
+John.claculateAge();
+
+var  Mike = {
+    name: 'Mike',
+    yearOfBirth: '1967'
+    
+};
+
+Mike.calculateAge = John.claculateAge;
+
+Mike.calculateAge();
+
+
 
 
